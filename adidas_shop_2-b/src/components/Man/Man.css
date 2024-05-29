@@ -1,0 +1,9 @@
+.man {
+    background: rgb(255, 255, 255);
+}
+
+.ul {
+    margin-top: 30px;
+    display: flex;
+    margin-left: 38px;
+}

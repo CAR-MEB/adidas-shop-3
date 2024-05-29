@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+#hp_1{
+    width: 100%;
+    height: 850px;
+
+}
+
+.hp_h1{
+   left: 20px;
+    color: rgb(212, 212, 212);
+    font-size: 120px;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        position: absolute;
+        top: 400px;
+}
+
+.home-page_container{
+    position: relative;
+}
+
+.btn_hp{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    top: 690px;
+    left: 25px;
+    background-color: rgb(83, 198, 255);
+    border-radius: 10px;
+}
+
+.carouselman_con{
+    margin-top: 70px;
+}
+
+.carousel_man h3{
+    font-size: 50px;
+    color: white;
+    margin:50px ;
+}
+
+.item1{
+    display: flex;
+    margin-left: 100px;
+}
+
+.item1 img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+}
+
+.item1 h1{
+    color: rgba(190, 190, 190, 0.831);
+    margin-left:150px;
+}
+
+.item1 p{
+    margin-left: 150px;
+    align-items: center;
+}
+
+#kids-1{
+        margin-top: 80px;
+}
+
+.item-kids{
+    color: white;
+}
+
+.item1 button{
+    width: 100px;
+    height: 40px;
+    margin-left: 800px;
+    background-color: rgb(99, 99, 99);
+    color: rgb(255, 255, 255);
+    border: white 1px solid;
+    border-radius: 35px;
+}
+
+.carouselwoman_con {
+    margin-top: 70px;
+}
+
+.carousel_woman h3{
+    font-size: 50px;
+    color: white;
+    margin: 50px;
+}
+
+.carouselkids_con {
+    margin-top: 70px;
+}
+
+.carousel_kids h3 {
+    font-size: 50px;
+    color: white;
+    margin: 50px;
+}
+
+.carousel_kids{
+    margin-top: 50px;
+}
+
+.AboutUs{
+    
+    margin-top: 50px;
+    width: 100%;
+    height: 750px;
+    background-color: white;
+}
+
+.about1 h3{
+    margin: 20px;
+    margin-left: 70px;
+    font-size: 60px;
+}
+
+.about2 h3 {
+    margin-left: 60px;
+    font-size: 60px;
+    color: white;
+}
+
+.AboutUs p{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 30px;
+}
+
+.AboutUs h1{
+    font-size: 100px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.about2 p{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.div_23{
+    margin-top: 70px;
+   display: flex;
+}
+
+.div_20{
+    display: flex;
+}
+
+.div_20 img{
+    border-radius: 50px;
+    margin-left: 190px;
+    width:450px;
+    height: 550px;
+}
+
+.about1 p{
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+.div_23 img{
+    border-radius: 50px;
+    margin-left: 70px;
+    width: 450px;
+    height: 550px;
+}
+
+/* footer */
+
+/* Footer.css */
+.footer {
+    margin-top: 800px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,94 @@
+.women {
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+.shikers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.running {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.slides_sandals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.walking {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.t-shorts_tops {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.shorts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.plus_size {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.dresses_skirts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.basketball {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.cycking {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.golf {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.hiking {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.shoes {
+    margin-top: 30px;
+    display: flex;
+    margin-left: 15%;
+}
+
+.clothing {
+    margin-top: -10%;
+    display: flex;
+    margin-left: 50%;
+}
+
+.shop_by_sport {
+    margin-top: -10%;
+    display: flex;
+    margin-left: 80%;
+}

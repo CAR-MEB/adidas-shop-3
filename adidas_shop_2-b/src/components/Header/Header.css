@@ -1,0 +1,33 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-spacer{
+    height: 76px;
+}
+
+#logo_img{
+    width: 80px;
+    height: 80px;
+    right: 30px;
+}
+
+
+.item{
+    margin-left: 50px;
+    margin-top: 25px;
+    font-weight: 400;
+}
+
+.me-auto{
+    margin-left: 27%;
+}
+
+#cart_lg{
+    margin-left: 400px;
+    width: 70px;
+    height: 70px;
+}

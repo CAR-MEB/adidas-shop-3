@@ -1,0 +1,70 @@
+.kids {
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-style:inherit;
+}
+.snikers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.soccer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.shirts_tops {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.slides_sandals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.running {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.slip-on_straps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+.shorts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.hoodies_sweatshirts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+.pants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 524px);
+}
+
+
+.shoes {
+    margin-top: 30px;
+    display: flex;
+    margin-left: 15%;
+} 
+
+.clothing {
+    margin-top: -10%;
+    display: flex;
+    margin-left: 50%;
+}
+
