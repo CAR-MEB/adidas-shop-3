@@ -6,9 +6,10 @@ import cart_logo from '../../assets/msg689684673-74670.jpg'
 import { Link } from 'react-router-dom';
 
 function Header() {
+
     return (
         <>
-
+            
         <div className="header-container">
         <Navbar bg="white" expand="lg">
             <Container>
@@ -25,9 +26,13 @@ function Header() {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+
+        
         </div>
 
         <div className="header-spacer"></div>
+
+        
 
         </>
     );

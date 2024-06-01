@@ -21,6 +21,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const Home = () => {
   return (
     <>
+        
           <div className="home-page_container">
         <img id='hp_1' src={homepage1} alt="" />
         <h1 className='hp_h1'>IMPOSSIBLE IS NOTHING</h1>

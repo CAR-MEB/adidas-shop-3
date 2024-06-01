@@ -1,7 +1,7 @@
 import { Route, Routes, Link} from 'react-router-dom'
 import './Kids.css'
 import Card from 'react-bootstrap/Card'
-
+import Carousel from 'react-bootstrap/Carousel';
 //boys shoes (sneaker)
 import img1 from '../../assets/adidas-kids-shoes.1.avif'
 import img2 from '../../assets/adidas-kids-shoes.2.avif'
@@ -354,12 +354,58 @@ import img100 from '../../assets/adidas-kids-clothing.80.avif'
  import img178 from '../../assets/adidas-kids-clothing-g.78.avif'
  import img179 from '../../assets/adidas-kids-clothing-g.79.avif'
  import img180 from '../../assets/adidas-kids-clothing-g.80.avif'
+ import React, {useEffect, useState } from 'react';
  
  
 
 const Kids = () => {
+  
+
+//     const [search, setSearch] = useState("") ;
+//     const [searchData, setSearchData] = useState([])
+//     const handleChange = e  => {
+//         setSearch(e.target.value)
+//     }
+// const handleClose = () => {
+//     setSearch("")
+//     setSearchData([])
+// }
+//     useEffect(() => {
+//         if(search !== "") {
+//             fetch(`http://api=${search}`)
+//               .then(res => res.json())
+//               .then(data => setSearchData(data))
+//         }
+//     }, [search])
   return (
-    <div className='kids'>
+<div className='kids'>
+         {/* <div className='form'>
+            <form className='search_form'>
+                <input
+                    type="text"
+                    placeholder="Search for our product... "
+                    className='search_input'
+                    onChange={handleChange}
+                    value={search}
+                />    
+                <div className='search_ikon'>
+                    { search === "" ? (
+                         <Carousel/>
+                        ) : ( <Carousel.Icon onClick={handleClose}/> 
+                        )}
+                </div>
+            </form>
+         </div>
+         <div className='products'>
+            {
+                searchData.map((data, index) =>{
+                    return  <a href={data.show.url} key={index}  target='_blank' className='ssl'>
+                    {data.show.name}
+                </a>
+                })
+            }
+         </div> */}
+
        <div className='shoes'>
             <ul>
                 <div>BOYS SHOES</div>
@@ -396,13 +442,12 @@ const Kids = () => {
    <div className='cards'>
     <Routes>
       <Route path="snikers" element={<div className='shikers'>
-
-                        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img1} />
                             <Card.Body>
                                 <Card.Title>GAZELLE BOLD SHOES</Card.Title>
                                 <Card.Text>
-                                    Women's • Originals
+                                 Kids Unisex • Originals
                                 </Card.Text>
                                 <Card.Text>$120</Card.Text>
                                 <Card.Text>20 colorst</Card.Text>
@@ -412,342 +457,360 @@ const Kids = () => {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img2} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GAZELLE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                  Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80</Card.Text>
+                                <Card.Text> 4colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img3} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SUPERSTAR SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80 </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img4} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                  Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70  </Card.Text>
+                                <Card.Text> 5 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img5} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
+                                <Card.Title>GRAND COURT 2.0 SHOES</Card.Title>
+                                 <Card.Text>Kids Unisex • Essentials</Card.Text>
+                                <Card.Text>$55</Card.Text>
+                                <Card.Text> 6 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img6} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GAZELLE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Essentials
                                 </Card.Text>
+                                <Card.Text>$80  </Card.Text>
+                                <Card.Text> 2 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img13} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>STAN SMITH SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80  </Card.Text>
+                                <Card.Text> 5 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img8} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>CAMPUS 00S SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$90  </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img9} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SUPERSTAR SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
-                            </Card.Body>
-                        </Card>
-
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={img10} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
+                                <Card.Text>$80 </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img11} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GAZELLE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80  </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img12} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>X_PLRPHASE SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$40  </Card.Text>
+                                <Card.Text> 2 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img7} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GRAND COURT 2.0 SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$40  </Card.Text>
+                                <Card.Text> 1 colors  </Card.Text>
+                             
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img14} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GAZELLE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80  </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img15} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>OZWEEGO SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$60  </Card.Text>
+                                <Card.Text> 2 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img16} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>CAMPUS 00S SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$90  </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img17} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                            <Card.Title>SUPERSTAR SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80 </Card.Text>
+                                <Card.Text> 4 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img18} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>RACER TR23 SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$55  </Card.Text>
+                                <Card.Text> 2 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img19} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>X_PLRPATH SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$65  </Card.Text>
+                                <Card.Text> 8 colors  </Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img20} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>X_PLRPATH SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$65  </Card.Text>
+                                <Card.Text> 8 colors  </Card.Text>
                             </Card.Body>
                         </Card>
                     </div>} />
       <Route path="soccer" element={<div className='soccer'>
        <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={img181} />
+                <Card.Img variant="top" src={img181} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24+ LACELESS FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $112
                             </Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img182} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 ELITE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                             $140
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img183} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>X CRAZYFAST ELITE LACELESS FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $112
                             </Card.Text>
+                                <Card.Text> 5 colors  </Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img184} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $54
                             </Card.Text>
+                            <Card.Text> 2 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img185} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE LACELESS FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                $112
                             </Card.Text>
+                            <Card.Text> 2 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img186} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE LACELESS TURF CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $80
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img187} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>X CRAZYFAST LEAGUE LACELESS FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $64
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img188} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            $64
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img189} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                $56
                             </Card.Text>
+                            <Card.Text> 4colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img190} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                $56
                             </Card.Text>
+                            <Card.Text> 4colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img191} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE TURF CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $56
                             </Card.Text>
+                            <Card.Text> 3 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img192} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>COPA PURE II LEAGUE TURF SHOES</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                              $44
                             </Card.Text>
+                            <Card.Text> 1 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -755,32 +818,36 @@ const Kids = () => {
                         <Card.Img variant="top" src={img193} />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img194} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>COPA PURE II LEAGUE FIRM GROUND CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $55
                             </Card.Text>
+                            <Card.Text>3 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img195} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR LEAGUE LACELESS TURF CLEATS KIDS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $80
                             </Card.Text>
+                            <Card.Text> 1 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -788,32 +855,36 @@ const Kids = () => {
                         <Card.Img variant="top" src={img196} />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img197} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>GAMEMODE FIRM GROUND SOCCER CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $49
                             </Card.Text>
+                            <Card.Text>3 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img198} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>X CRAZYFAST.1 FIRM GROUND SOCCER CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                               $104
                             </Card.Text>
+                            <Card.Text>2 colors</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -821,21 +892,24 @@ const Kids = () => {
                         <Card.Img variant="top" src={img199} />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text> colors</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img200} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PREDATOR 24 LEAGUE TURF CLEATS</Card.Title>
+                            <Card.Text> Children soccer</Card.Text>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                $57
                             </Card.Text>
+                            <Card.Text>3 colors</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -848,6 +922,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -859,6 +935,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -870,6 +948,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -881,6 +961,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -892,6 +974,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -903,6 +987,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -914,6 +1000,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -925,6 +1013,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -936,6 +1026,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -946,7 +1038,8 @@ const Kids = () => {
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
-                            </Card.Text>
+                            </Card.Text><Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -958,6 +1051,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -969,6 +1064,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -980,6 +1077,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -991,6 +1090,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1002,6 +1103,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1013,6 +1116,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1024,6 +1129,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1035,6 +1142,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1046,6 +1155,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1057,6 +1168,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -1064,11 +1177,13 @@ const Kids = () => {
        <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img221} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>проверка</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1080,6 +1195,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1091,6 +1208,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1102,6 +1221,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1113,6 +1234,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1124,6 +1247,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1135,6 +1260,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1146,6 +1273,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1157,6 +1286,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1168,6 +1299,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1179,6 +1312,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1190,6 +1325,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1201,6 +1338,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1212,6 +1351,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1223,6 +1364,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1234,6 +1377,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1245,6 +1390,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1256,6 +1403,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1267,6 +1416,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1278,6 +1429,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -1288,7 +1441,7 @@ const Kids = () => {
                             <Card.Body>
                                 <Card.Title>GAZELLE BOLD SHOES</Card.Title>
                                 <Card.Text>
-                                    Women's • Originals
+                                Kids Unisex • Originals
                                 </Card.Text>
                                 <Card.Text>$120</Card.Text>
                                 <Card.Text>20 colorst</Card.Text>
@@ -1298,165 +1451,180 @@ const Kids = () => {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img242} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img243} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70</Card.Text>
+                                <Card.Text>25 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img244} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img245} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img246} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>SAMBA OG SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$70</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img247} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>VL COURT 3.0 SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$45</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img248} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>LITE RACER ADAPT 5.0 SLIP-ON LACE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Essentials
                                 </Card.Text>
+                                <Card.Text>$40</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img249} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>LITE RACER ADAPT 5.0 SLIP-ON LACE SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Essentials
                                 </Card.Text>
+                                <Card.Text>$40</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img250} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>CLOUDFOAM PURE SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$65</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img251} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>CLOUDFOAM PURE SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$65</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img252} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>CLOUDFOAM PURE SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear    
                                 </Card.Text>
+                                <Card.Text>$65</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img253} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>STAN SMITH SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$40</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img254} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>STAN SMITH SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$40</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img255} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GRAND COURT 2.0 SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$30</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img256} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>GRAND COURT 2.0 SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                               Kids Unisex • Sportswear
                                 </Card.Text>
+                                <Card.Text>$30</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
@@ -1474,33 +1642,36 @@ const Kids = () => {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img258} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>VL COURT 3.0 SHOES</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$50</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img259} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Lifestyle
                                 </Card.Text>
+                                <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                             </Card.Body>
                         </Card>
 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img260} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>FORUM LOW CL J</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                Kids Unisex • Originals
                                 </Card.Text>
+                                <Card.Text>$80</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                             </Card.Body>
                         </Card>
                     </div>} />
@@ -1509,8 +1680,9 @@ const Kids = () => {
                         <Card.Img variant="top" src={img301} />
                         <Card.Body>
                             <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
-                            <Card.Text> $54  </Card.Text>
-                            <Card.Text>8 colorst</Card.Text>
+                            <Card.Text> Kids Unisex • Lifestyle </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                            <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1518,9 +1690,9 @@ const Kids = () => {
                         <Card.Img variant="top" src={img302} />
                         <Card.Body>
                             <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
-                            <Card.Text>
-                              $48
-                            </Card.Text>
+                            <Card.Text>Kids Unisex • Lifestyle</Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1528,42 +1700,45 @@ const Kids = () => {
                         <Card.Img variant="top" src={img303} />
                         <Card.Body>
                             <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
-                            <Card.Text>
-                               $48
-                            </Card.Text>
+                            <Card.Text>Kids Unisex • Lifestyle</Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img304} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$65</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img305} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img306} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KID</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1572,97 +1747,119 @@ const Kids = () => {
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$45</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img308} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img309} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img310} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img311} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img312} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$60</Card.Text>
+                                <Card.Text>6 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img313} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$45</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img314} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>DURAMO SPIDER-MAN EL K</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Lifestyle
                             </Card.Text>
+                            <Card.Text>$58</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img315} />
                         <Card.Body>
+                            <Card.Title>DURAMO SL SHOES KIDS</Card.Title>
+                            <Card.Text>
+                            Kids Unisex • Lifestyle
+                            </Card.Text>
+                            <Card.Text>$45</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
+                        </Card.Body>
+                    </Card>
+{/* 
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={img1} />
+                        <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1674,6 +1871,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1685,6 +1884,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1696,6 +1897,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1706,162 +1909,169 @@ const Kids = () => {
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                            </Card.Text><Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={img1} />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card> */}
                     </div>} />
       <Route path="slides&sandals_g" element={<div className='slides_sandals'>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img261} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>MEHANA SANDALS KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$26</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img262} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE AQUA SLIDES</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$16</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img263} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE AQUA SLIDES</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$16</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img264} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE LITE SLIDES</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img265} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TERREX CAPTAIN TOEY 2.0 SANDALS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • TERREX
                             </Card.Text>
+                            <Card.Text>$23</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img266} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE COMFORT SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img267} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE COMFORT SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img268} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADIFOM ADILETTE SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img269} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADIFOM ADILETTE SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img270} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADIFOM ADILETTE SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img271} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE COMFORT X MARVEL SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$18</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img272} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE COMFORT ADJUSTABLE SLIDES</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Essentials
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img273} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADIDAS ADILETTE X LEGO® SLIDES</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$18</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1873,72 +2083,80 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img275} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TERREX X LEGO® CAPTAIN TOEY SANDALS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • TERREX
                             </Card.Text>
+                            <Card.Text>$42</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img276} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADILETTE COMFORT X MARVEL SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$18</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img277} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>STAR WARS ADILETTE COMFORT SLIDES KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Sportswear
                             </Card.Text>
+                            <Card.Text>$21</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img278} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                        <Card.Title>ADILETTE LITE SLIDES</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img279} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADIFOM SUPERNOVA SHOES</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$70</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img280} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>YEEZY BOOST 700 V2 KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>9 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -1951,6 +2169,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1962,6 +2182,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1973,6 +2195,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1984,6 +2208,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -1995,6 +2221,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2006,6 +2234,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2017,6 +2247,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2028,6 +2260,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2039,6 +2273,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2050,6 +2286,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2061,6 +2299,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2072,6 +2312,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2083,6 +2325,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2094,6 +2338,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2105,6 +2351,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2116,6 +2364,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2126,7 +2376,9 @@ const Kids = () => {
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
-                            </Card.Text>
+                            </Card.Text><Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
+
                         </Card.Body>
                     </Card>
 
@@ -2138,6 +2390,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2149,6 +2403,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2160,6 +2416,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -2167,99 +2425,108 @@ const Kids = () => {
        <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img21} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>SS 2 COLOR LOGO TEE24</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Boys • Training
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>2 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img22} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>INTER MIAMI CF 24/25 MESSI HOME JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Boys • Soccer
                             </Card.Text>
+                            <Card.Text>$110</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img23} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADICOLOR TREFOIL TEE</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$25</Card.Text>
+                                <Card.Text>7 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img24} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TIRO 24 JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$55</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img25} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ARGENTINA 24 MESSI HOME JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$110</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img26} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>MEXICO 24 AWAY JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$80</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img27} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>MEXICO 24 HOME JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
                         </Card.Body>
+                        <Card.Text>$80</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img28} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>INTER MIAMI CF 23/24 AWAY JERSEY KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$70</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img29} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TENNIS PRO TEE KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Boys • Tennis
                             </Card.Text>
+                            <Card.Text>$55</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2271,17 +2538,20 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img31} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>PINK T-SHIRT</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$20</Card.Text>
+                                <Card.Text>1 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2293,6 +2563,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2304,6 +2576,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2315,6 +2589,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2326,6 +2602,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2337,6 +2615,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2348,6 +2628,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2359,6 +2641,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2370,6 +2654,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2381,6 +2667,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -2388,22 +2676,24 @@ const Kids = () => {
         <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img41} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TIRO 24 SHORTS KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img42} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>CLUB TENNIS 3-STRIPES SHORTS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Boys • Tennis
                             </Card.Text>
+                            <Card.Text>$35</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2415,50 +2705,56 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img44} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TIRO 24 SHORTS KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img45} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>ADICOLOR SHORTS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Originals
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>3 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img46} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TIRO 24 SHORTS KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img47} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>TIRO 24 SHORTS KIDS</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                            Kids Unisex • Soccer
                             </Card.Text>
+                            <Card.Text>$30</Card.Text>
+                                <Card.Text>4 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2470,6 +2766,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2481,6 +2779,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2492,17 +2792,21 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img51} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>AOP CAMO SHORT S24</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$21</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2514,6 +2818,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2525,6 +2831,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2536,17 +2844,21 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img55} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>AOP CAMO SHORT S24</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$21</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2558,17 +2870,21 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img57} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>AOP CAMO SHORT S24</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$21</Card.Text>
+                                <Card.Text>5 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2580,6 +2896,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2591,6 +2909,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2602,6 +2922,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -2614,6 +2936,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2625,6 +2949,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2636,6 +2962,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2647,6 +2975,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2658,6 +2988,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2669,6 +3001,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2680,6 +3014,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2691,6 +3027,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2702,6 +3040,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2713,6 +3053,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2724,6 +3066,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2735,6 +3079,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2746,6 +3092,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2757,6 +3105,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2768,6 +3118,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2779,6 +3131,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2790,6 +3144,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2801,6 +3157,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2812,6 +3170,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2823,6 +3183,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -2835,6 +3197,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2846,6 +3210,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2857,6 +3223,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2868,6 +3236,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2879,6 +3249,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2890,6 +3262,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2901,6 +3275,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2912,6 +3288,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2923,6 +3301,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2934,6 +3314,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2945,6 +3327,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2956,6 +3340,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2967,6 +3353,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2978,6 +3366,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -2989,6 +3379,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3000,6 +3392,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3011,6 +3405,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3022,6 +3418,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3033,6 +3431,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3044,6 +3444,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -3056,6 +3458,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3067,6 +3471,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3078,6 +3484,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3089,6 +3497,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3100,6 +3510,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3111,6 +3523,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3122,6 +3536,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3133,6 +3549,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3144,6 +3562,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3155,6 +3575,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3166,6 +3588,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3177,6 +3601,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3188,6 +3614,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3199,6 +3627,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3210,6 +3640,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3221,6 +3653,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3232,6 +3666,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3243,6 +3679,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3254,6 +3692,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3265,6 +3705,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -3277,6 +3719,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3288,6 +3732,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3299,6 +3745,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3310,6 +3758,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3321,6 +3771,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3332,6 +3784,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3343,6 +3797,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3354,6 +3810,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3365,6 +3823,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3376,6 +3836,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3387,6 +3849,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3398,6 +3862,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3409,6 +3875,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3420,6 +3888,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3431,6 +3901,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3442,6 +3914,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3453,6 +3927,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3464,6 +3940,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3475,6 +3953,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3486,6 +3966,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -3498,6 +3980,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3509,6 +3993,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3520,6 +4006,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3531,6 +4019,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3542,6 +4032,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3553,6 +4045,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3564,6 +4058,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3575,6 +4071,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3586,6 +4084,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3597,6 +4097,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3608,6 +4110,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3619,6 +4123,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3630,6 +4136,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3641,6 +4149,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3652,6 +4162,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3663,6 +4175,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3674,6 +4188,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3685,6 +4201,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3696,6 +4214,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3707,6 +4227,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
@@ -3719,6 +4241,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3730,6 +4254,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3741,6 +4267,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3752,6 +4280,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3763,6 +4293,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3774,6 +4306,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3785,6 +4319,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3796,6 +4332,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3807,6 +4345,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3818,6 +4358,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3829,6 +4371,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3840,6 +4384,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3851,6 +4397,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3862,6 +4410,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3873,6 +4423,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3884,6 +4436,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3895,6 +4449,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3906,6 +4462,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3917,6 +4475,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
 
@@ -3928,6 +4488,8 @@ const Kids = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
+                            <Card.Text>$120</Card.Text>
+                                <Card.Text>20 colorst</Card.Text>
                         </Card.Body>
                     </Card>
                     </div>} />
